@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" type="text/css" />
+    <title>Amortizaciones</title>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1 class="title">Calculadora de amortizaciones</h1>
+      </header>
+      <div>
+        <form action="tables.html" class="box">
+          <h3>
+            Aqui encontraras lo necesario para calcular una tabla de
+            amortización
+          </h3>
+          <label>Monto</label>
+          <input
+            type="number"
+            class="label--amount"
+            placeholder="Valor en pesos $ (Ej: 3000000)"
+          />
+          <br />
+          <label>Tasa de interes (en Nominal)</label>
+          <input
+            type="number"
+            class="label--nint"
+            placeholder="Tasa de interés nominal sin % (Ej: 30)"
+          />
+          <br />
+          <label>Periodicidad</label>
+          <select name="periodicidad" class="label--per">
+            <option value="inicial" selected>
+              Selecciona una periodicidad
+            </option>
+            <option value="mensual">Mensual</option>
+            <option value="bimestral">Bimestral</option>
+            <option value="trimestral">Trimestral</option>
+            <option value="cuatrimestral">Cuatrimestral</option>
+            <option value="semestral">Semestral</option>
+            <option value="anual">Anual</option>
+          </select>
+          <br />
+          <label>No. de periodos</label>
+          <input
+            type="number"
+            class="label--nper"
+            placeholder="Número de periodos del crédito"
+          />
+          <input type="submit" class="label--submit" value="Calcular" />
+          <br />
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

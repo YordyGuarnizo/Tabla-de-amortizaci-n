@@ -8,6 +8,7 @@ const amount = document.querySelector('.label--amount');
 const intRate = document.querySelector('.label--nint');
 const periodicity = document.querySelector('.label--per');
 const periodsNumber = document.querySelector('.label--nper');
+const header = document.querySelector('.title');
 
 //Elements to insert
 const divText = document.querySelector('.text');
@@ -49,9 +50,53 @@ let amort = 0;
 //Creating new Map
 const amortTable = new Map();
 
+//Putting the HTML in the page
+const htmlLegend = function (amount, nper) {
+  const html = `
+  <h4 class="legend">
+    El valor de la cuota con un credito de $${amount}, una tasa de interes al
+    ${realInt * 100}% ${
+    periodicity.options[periodicity.selectedIndex].text
+  } efectivo y a ${nper} periodos es de $${nPayment}
+  </h4>`;
+
+  divText.insertAdjacentHTML('beforeend', html);
+};
+
+const headTable = function () {
+  const html = `
+  <tr>
+            <th>No.</th>
+            <th>Cuota</th>
+            <th>Interes</th>
+            <th>Amortización</th>
+            <th>Saldo</th>
+  </tr>`;
+
+  divTable.insertAdjacentHTML('beforeend', html);
+};
+
+const tablesValues = function (map) {
+  for (const [key, { pago, interes, amortizacion, saldo }] of map) {
+    let dataTabla = `
+  <tr>
+    <td>${key}</td>
+    <td>${pago}</td>
+    <td>${interes}</td>
+    <td>${amortizacion}</td>
+    <td>${saldo}</td>
+  </tr>
+    `;
+    divTable.insertAdjacentHTML('beforeend', dataTabla);
+  }
+};
+
 //--------------------------- EXECUTION ------------------------------
 btnSubmit.addEventListener('click', function (e) {
   e.preventDefault();
+
+  //Changing the title
+  header.textContent = 'Tabla de amortizacion';
 
   //Hiding the form
   formulary.style.display = 'none';
@@ -63,6 +108,9 @@ btnSubmit.addEventListener('click', function (e) {
   //Calculating the n payemnt
   calcPayment(amountValue, intRateValue, periodsNumberValue);
   console.log(nPayment);
+
+  //Execute the legend
+  htmlLegend(amountValue, periodsNumberValue);
 
   //////////Setting the map
   //First period
@@ -86,6 +134,7 @@ btnSubmit.addEventListener('click', function (e) {
     });
   }
 
-  console.log(amortTable);
-  console.log(interest);
+  //Execute the table with the map
+  headTable();
+  tablesValues(amortTable);
 });

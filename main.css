@@ -80,7 +80,6 @@ input[type='submit'] {
 .table--amort {
   display: block;
   position: absolute;
-  transform: translate(-50%, -50%);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -89,7 +88,7 @@ input[type='submit'] {
 }
 
 .legend {
-  margin: 40px;
+  margin-top: 5%;
   display: flex;
   align-items: center;
   justify-content: center;

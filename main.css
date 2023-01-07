@@ -32,6 +32,7 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  opacity: 1;
 }
 
 input[type='number'] {
@@ -77,15 +78,22 @@ input[type='submit'] {
 }
 
 .table--amort {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+  display: block;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
 }
 
 .legend {
   margin: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 tr th {
@@ -104,4 +112,5 @@ tr td {
   opacity: 0.8;
   padding-left: 5px;
   border-radius: 2px;
+  height: 30px;
 }

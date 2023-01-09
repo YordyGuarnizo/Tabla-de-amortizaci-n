@@ -2,37 +2,36 @@ body,
 html {
   /* background: #eee url('59104.jpg') no-repeat fixed; */
   background-color: rgb(238, 235, 229);
-  background-size: cover;
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
-  position: relative;
 }
 
 header {
   background-color: rgba(80, 150, 197, 0.815);
   width: 100%;
   height: 70px;
-  margin-top: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.title {
   color: white;
 }
 /* -------------CSS HTML HOJA 1 (INDEX.HTML)-------------------- */
 
-.box {
-  display: block;
-  background-color: white;
-  padding: 12px 20px;
-  border-radius: 4px;
-  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+.container--box {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  opacity: 1;
+}
+
+.box {
+  background-color: white;
+  padding: 12px 20px;
+  border-radius: 4px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
 }
 
 input[type='number'] {
@@ -67,28 +66,34 @@ input[type='submit'] {
 
 /* -----------CSS HTML HOJA 2 (TABLES.HTML)-------------------- */
 
+.new--credit {
+  display: flex;
+  justify-content: center;
+}
+
+.btn--credit {
+  width: 30%;
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
 .container--amort {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  font-size: 110%;
-  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
 }
 
 .table--amort {
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   text-align: center;
 }
 
 .legend {
-  margin-top: 5%;
   display: flex;
+  float: initial;
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -111,4 +116,13 @@ tr td {
   padding-left: 5px;
   border-radius: 2px;
   height: 30px;
+}
+
+tr td:hover {
+  opacity: 1;
+  text-shadow: 3px #22aa82;
+}
+
+.hidden {
+  display: none;
 }

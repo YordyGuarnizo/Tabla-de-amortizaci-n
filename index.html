@@ -12,7 +12,10 @@
       <header>
         <h1 class="title">Calculadora de amortizaciones</h1>
       </header>
-      <div>
+      <div class="new--credit">
+        <button class="btn--credit">Calcular nuevo credito</button>
+      </div>
+      <div class="container--box">
         <form class="box">
           <h3>
             Aqui encontraras lo necesario para calcular una tabla de
@@ -29,7 +32,7 @@
           <input
             type="number"
             class="label--nint"
-            placeholder="Tasa de interés nominal sin % (Ej: 30)"
+            placeholder="Tasa de interés nominal sin % (Ej: Si es 30%, escribir 30)"
           />
           <br />
           <label>Periodicidad</label>
@@ -59,18 +62,18 @@
         <!-- <h4 class="legend">
           El valor de la cuota con un credito de 300000, una tasa de interes al
           20% bimestral efectivo y a 8 periodos es de 150000
-        </h4> -->
+        </h4>  -->
       </div>
-      <div>
-        <table class="table--amort">
-          <!-- <tr>
+      <div class="container--amort">
+        <!-- <table class="table--amort">
+           <tr>
             <th>No.</th>
             <th>Cuota</th>
             <th>Interes</th>
             <th>Amortización</th>
             <th>Saldo</th>
           </tr> -->
-          <!-- <tr>
+        <!-- <tr>
             <td>0</td>
             <td></td>
             <td></td>
@@ -83,8 +86,8 @@
             <td>10000</td>
             <td>30000</td>
             <td>27000</td>
-          </tr> -->
-        </table>
+          </tr> 
+        </table> -->
       </div>
     </main>
     <script src="script.js"></script>

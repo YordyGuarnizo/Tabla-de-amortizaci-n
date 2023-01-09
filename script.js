@@ -131,8 +131,11 @@ const tableCreator = function (map) {
 
 btnSubmit.addEventListener('click', function (e) {
   //Validation of information
-  if (amount.value.length === 0) {
-    alert('Introduzca un valor de prestamo');
+  if (
+    amount.value.length === 0 ||
+    +amount.value !== Math.trunc(+amount.value)
+  ) {
+    alert('Introduzca un valor de prestamo, este sin decimales');
     return;
   } else if (intRate.value.length === 0) {
     alert('Introduzca una tasa de interes');

@@ -145,8 +145,11 @@ btnSubmit.addEventListener('click', function (e) {
   ) {
     alert('Seleccione un tipo de periodicidad');
     return;
-  } else if (periodsNumber.value.length === 0) {
-    alert('Introduzca un no. de periodos');
+  } else if (
+    periodsNumber.value.length === 0 ||
+    +periodsNumber.value !== Math.trunc(+periodsNumber.value)
+  ) {
+    alert('Introduzca un no. de periodos en numeros enteros');
     return;
   } else {
     //App's execution

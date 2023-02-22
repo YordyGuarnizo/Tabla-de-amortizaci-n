@@ -1,5 +1,5 @@
 <h1 align="center">
-  <p align="center"> Table of amortization"</p>
+  <p align="center"> Table of amortization</p>
 </h1>
 
 
